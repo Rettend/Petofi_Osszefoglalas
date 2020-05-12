@@ -43,6 +43,7 @@ body {
     z-index: 10;
     right: 30px;
     top: 20px;
+    width: auto;
     cursor: pointer;
     animation-name: rainbowAN;
     animation-duration: 1s;
@@ -76,12 +77,12 @@ body {
 }
 
 .navbar {
-    position: absolute;
+    position: relative;
     left: -60px;
 }
 
 .nav-item {
-    position: relative;
+    position: static;
     list-style-type: none;
     margin: 15px;
     height: 0px;
@@ -107,8 +108,8 @@ body {
 .oldal {
     position: absolute;
     width: 0%;
-    height: 0%;
-    z-index: -10;
+    height: auto;
+    z-index: 5;
     visibility: hidden;
     left: 0;
     top: -10px;
@@ -116,30 +117,16 @@ body {
     transition: 0.3s;
 }
 
-.oldal:nth-child(1) {
-    top: -500px;
-}
-
 .nav-item:hover {
     width: 275px;
     transition: .2s;
 }
-
 .nav-item:hover p {
     margin-left: 45px;
     transition: .2s;
 }
 
-.nav-item:hover .oldal,
-.oldal:hover {
-    left: -1000px;
-}
-
-.nav-item.active {
-    margin-left: 1000px;
-}
-
-.nav-item.active .oldal,
-.oldal.active {
-    left: -1000px;
+.nav-item.active .oldal:nth-child(1) {
+    width: 80%;
+    visibility: visible;
 }

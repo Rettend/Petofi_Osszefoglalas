@@ -4,5 +4,4 @@ function Rainbow() {
 
 function toggleActive(x) {
     document.getElementById(x).classList.toggle("active");
-    
 }
