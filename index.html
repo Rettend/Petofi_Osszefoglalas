@@ -1,18 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Petőfi Összefoglalás</title>
+    <script src="code.js"></script>
 </head>
+
 <body>
+    <img draggable="false" onclick="Rainbow()" id="petofi" src="/petofi.png" alt="petofi" class="petofi">
     <div class="header">
-        Összefoglalás
+        Petőfi Sándor
     </div>
 
     <ul class="navbar">
-
+        <li class="nav-item" id="cimke1" onclick="toggleActive('cimke1')">
+            <p>
+                Életrajz
+            </p>
+            <div class="oldal">
+                SzövegSzövegSzövegSzövegSzövegSzövegSzöveg<br>
+                SzövegSzövegSzövegSzövegSzövegSzövegSzöveg<br>
+            </div>
+        </li>
+        <li class="nav-item" id="cimke2" onclick="toggleActive('cimke2')">
+            <p>
+                Népies költészet
+            </p>
+            <div class="oldal">
+                SzövegSzövegSzövegSzövegSzövegSzövegSzöveg<br>
+                SzövegSzövegSzövegSzövegSzövegSzövegSzöveg<br>
+            </div>
+        </li>
+        <li class="nav-item" id="cimke3" onclick="toggleActive('cimke3')">
+            <p>
+                Családi líra
+            </p>
+            <div class="oldal">
+                SzövegSzövegSzövegSzövegSzövegSzövegSzöveg<br>
+                SzövegSzövegSzövegSzövegSzövegSzövegSzöveg<br>
+            </div>
+        </li>
+        <li class="nav-item">
+            <p>
+                Tájköltészet
+            </p>
+            <div class="oldal">
+                SzövegSzövegSzövegSzövegSzövegSzövegSzöveg<br>
+                SzövegSzövegSzövegSzövegSzövegSzövegSzöveg<br>
+            </div>
+        </li>
+        <li class="nav-item">
+            <p>
+                Elbeszélő költészet
+            </p>
+            <div class="oldal">
+                SzövegSzövegSzövegSzövegSzövegSzövegSzöveg<br>
+                SzövegSzövegSzövegSzövegSzövegSzövegSzöveg<br>
+            </div>
+        </li>
+        <li class="nav-item">
+            <p>
+                Forradalmi költészet
+            </p>
+            <div class="oldal">
+                SzövegSzövegSzövegSzövegSzövegSzövegSzöveg<br>
+                SzövegSzövegSzövegSzövegSzövegSzövegSzöveg<br>
+            </div>
+        </li>
+        <li class="nav-item">
+            <p>
+                Hitvesi költészet
+            </p>
+            <div class="oldal">
+                SzövegSzövegSzövegSzövegSzövegSzövegSzöveg<br>
+                SzövegSzövegSzövegSzövegSzövegSzövegSzöveg<br>
+            </div>
+        </li>
     </ul>
 </body>
+
 </html>

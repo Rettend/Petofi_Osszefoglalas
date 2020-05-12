@@ -1,8 +1,28 @@
 body {
-    background-color: rgb(192, 247, 247);
-    color: rgb(2, 81, 95);
+    background-color: #c0f7f7;
+    color: #02515f;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
+    cursor: default;
+    overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+    max-width: 30px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #a3e9e9;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #59a7a7;
+    border-radius: 50px;
+    box-shadow: inset 3px 3px 3px #00000049;
+}
+
+::-webkit-scrollbar-thumb:active {
+    box-shadow: inset 4px 4px 7px #00000049;
 }
 
 .header {
@@ -14,6 +34,112 @@ body {
     right: 0;
     text-align: center;
     font-weight: bold;
-    font-size: 40px;
-    background-color: rgb(18, 207, 207);
+    font-size: 50px;
+    background-color: #12cfcf;
+}
+
+.petofi {
+    position: absolute;
+    z-index: 10;
+    right: 30px;
+    top: 20px;
+    cursor: pointer;
+    animation-name: rainbowAN;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-play-state: paused;
+}
+
+@keyframes rainbowAN {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    10%, 90% {
+        transform: translate3d(-1px, 0, 0);
+      }
+      
+      20%, 80% {
+        transform: translate3d(2px, 0, 0);
+      }
+    
+      30%, 50%, 70% {
+        transform: translate3d(-4px, 0, 0);
+      }
+    
+      40%, 60% {
+        transform: translate3d(-1px, 0, 0);
+      }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+.navbar {
+    position: absolute;
+    left: -60px;
+}
+
+.nav-item {
+    position: relative;
+    list-style-type: none;
+    margin: 15px;
+    height: 0px;
+    width: 250px;
+    background-color: transparent;
+    border-top: 25px solid #0fc2c2;
+    border-bottom: 25px solid #0eb6b9;
+    border-right: 25px solid transparent;
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+    cursor: pointer;
+    transition: .7s;
+}
+
+.nav-item p {
+    margin: auto;
+    margin-left: 20px;
+    margin-top: -10px;
+    transition: .7s;
+}
+
+.oldal {
+    position: absolute;
+    width: 0%;
+    height: 0%;
+    z-index: -10;
+    visibility: hidden;
+    left: 0;
+    top: -10px;
+    background-color: #7ce5ff;
+    transition: 0.3s;
+}
+
+.oldal:nth-child(1) {
+    top: -500px;
+}
+
+.nav-item:hover {
+    width: 275px;
+    transition: .2s;
+}
+
+.nav-item:hover p {
+    margin-left: 45px;
+    transition: .2s;
+}
+
+.nav-item:hover .oldal,
+.oldal:hover {
+    left: -1000px;
+}
+
+.nav-item.active {
+    margin-left: 1000px;
+}
+
+.nav-item.active .oldal,
+.oldal.active {
+    left: -1000px;
 }
