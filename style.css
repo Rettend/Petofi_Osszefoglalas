@@ -171,10 +171,31 @@ body {
 }
 
 .nav-item.active p {
-    margin-left: 85%;
+    margin-left: 84%;
 }
 
 .nav-item.active .oldal {
     left: 3.5%;
     box-shadow: 1px 1px 10px 2px #0000001e;
+}
+
+
+.credit {
+    font-size: 50px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    margin: 0;
+
+    background-color: #527575;
+    color: transparent;
+    text-shadow: 2px 2px 3px #ffffff80;
+    background-clip: text;
+}
+
+.credit p {
+    font-size: 80px;
+    margin-bottom: -20px;
 }
